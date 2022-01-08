@@ -1,0 +1,121 @@
+:root {
+    --main-color: black;
+    --color: hsla(0, 0%, 100%, 0.734);
+    --font-family: sans-serif;
+}
+
+html {
+    /*reset html*/
+    box-sizing: border-box;
+    font-size: 16px;
+    padding-top: 1rem;
+}
+
+
+/*Hererde all elements after and before */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--main-color);
+    font-family: var(--font-family);
+}
+
+.container {
+    text-align: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.952) 0%, rgba(9, 9, 121, 1) 35%, rgba(4, 125, 197, 1) 72%, rgba(1, 181, 234, 1) 90%, rgba(0, 212, 255, 1) 100%);
+}
+
+.contact-form {
+    --form-ok-color: green;
+    --form-error-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.contact-form>* {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color);
+    font-family: var(--font-family);
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"] {
+    width: 50%;
+    font-weight: bold;
+    background-color: rgb(12, 121, 145);
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.contact-form input[type="submit"] {
+    background-color: rgba(50, 146, 187, 0.905);
+}
+
+.contact-form *::placeholder {
+    color: rgb(189, 112, 112);
+}
+
+.contact-form[required]:valid {
+    border: thin solid var(--form-ok-color)
+}
+
+.contact-form[required]:invalid {
+    border: thin solid var(--form-error-color)
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+.contact-form-loader {
+    text-align: center;
+}
+
+.contact-form-response {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff7f7;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
