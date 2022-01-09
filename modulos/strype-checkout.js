@@ -28,6 +28,11 @@ Promise.all([
             console.log(productData);
             $template.querySelector('.pastel').setAttribute("data-prices", element.id);
             $template.querySelector("img").src = productData[0].images[0];
+            $template.querySelector("img").alt = productData[0].name;
+            $template.querySelector("figcaption").innerHTML = `
+            ${productData[0].name}<br>
+            $ ${element.unit_amount_decimal} ${element.currency}`
+
             let $clone = d.importNode($template, true);
             $fragment.appendChild($clone);
         });

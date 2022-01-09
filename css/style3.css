@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.pastel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pastel>* {
+    flex: 1 1 100px;
+    margin: 1rem;
+}
+
+.pastel {
+    background-color: rgb(243, 192, 98);
+    color: rgb(8, 10, 6);
+    font-size: 125%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.pastel:hover {
+    opacity: .9;
+    transform: scale(.9);
+}
+
+.pastel img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pastel figcaption {
+    padding: 1rem;
+}
